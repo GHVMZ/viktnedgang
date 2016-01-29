@@ -53,11 +53,20 @@ padding-bottom: 6%;
 margin-top: 0;
 }
 
-h3,h4,h5{
+h3{
 font-weight: 400;
 font-size: 1.5em;
 color: #F1FFF6;
 margin: 0;
+margin-bottom: 15px;
+}
+
+h4{
+font-weight: 400;
+font-size: 1.2em;
+color: #F1FFF6;
+margin: 0;
+margin-top: 15px;
 margin-bottom: 15px;
 }
 
@@ -87,10 +96,10 @@ z-index: 2;
 #kalkyl p{text-align: right; opacity: 0.5;}
 #grundinformation{background-color: #42B16D;}
 
-#resultat{background-color: #247142; display: block;}
+#resultat{background-color: #247142; display: none;}
 #resultat ul{list-style-type: none; margin: 0; padding: 0;}
-#resultat ul li{color: rgba(255, 255, 255, 0.75); margin-top: 10px; padding-top: 10px; border-top: 1px solid rgba(255, 255, 255, 0.15); font-size: 1.2em; font-weight: 400;}
-#resultat ul li:first-child{border: 0;}
+#resultat ul li{color: rgba(255, 255, 255, 0.75); margin-top: 10px; padding-top: 10px; border-top: 1px solid rgba(255, 255, 255, 0.15); font-size: 0.95em; font-weight: 400;}
+#resultat ul li:first-child{}
 .kcal{color: #fff;}
 .minus{float: right; color: pink;}
 .under{float: right;}
@@ -113,7 +122,7 @@ margin-bottom: 25px;
 
 .info ul{list-style-type: none; margin: 0; padding: 0;}
 .info ul li{color: rgba(255, 255, 255, 0.75); margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px solid rgba(255, 255, 255, 0.15); line-height: 1.5;}
-.info ul li:last-child{margin: 0; padding: 0; border: 0; font-weight: 400; color: #fff; font-size: 1.3em;}
+.info ul li:last-child{margin: 0; padding: 0; border: 0;}
 .info ul li span{float: right; display: none;}
 .info ul li b{font-weight: 400; color: #fff;}
 .energi{color: #fff;}
@@ -186,9 +195,11 @@ margin-bottom: 4%;
 padding-bottom: 4%;
 }
 
-h3,h4,h5{
+h3{
 font-size: 1.8em;
 }
+
+h4{font-size: 1.4em;}
 }
 
 @media (min-width: 699px){

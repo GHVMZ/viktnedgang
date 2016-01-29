@@ -37,7 +37,6 @@ function rakna() {
 	
 	
 	
-	
 if (kon == 1) {
 for(i = 0; i < avdrag.length; i++){
 	bmiratio = (66.4730 + (13.7516 * vikt) + (5.0033 * langd) - (6.7550 * alder));
