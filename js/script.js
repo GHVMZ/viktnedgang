@@ -29,26 +29,9 @@ function rakna() {
     scrollTop: $("#resultat").offset().top
   }, 1000);
   
-  viktnedgang();
-  return false;
-}
 
-
-
-
-
-
-
-
-
-
-function viktnedgang() {
-    vikt = $('#vikt').val();
-    langd = $('#langd').val();
-    alder = $('#alder').val();
-    kon = $('#kon').val();
     aktivitet = $('#aktivitet').val();
-	var avdrag = [0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1];
+	var avdrag = [0.1,0.3,0.5,0.7,0.9,];
 	var text = "";
 	var i;
 	
@@ -60,7 +43,8 @@ for(i = 0; i < avdrag.length; i++){
 	bmiratio = (66.4730 + (13.7516 * vikt) + (5.0033 * langd) - (6.7550 * alder));
 	bmitotal = (bmiratio * aktivitet);
 	kcaltotal = (bmitotal - ((7000 * avdrag[i]) / 7));
-	text += "<li>" + kcaltotal + "</li>";
+	underskott = (bmitotal - kcaltotal);
+	text += "<li>" + Math.round(kcaltotal) + "kcal om dagen f&ouml;r att g&aring; ner " + (avdrag[i]) + " kilo i veckan" + "<span class='minus'>-" + Math.round(formel - kcaltotal) + "</span></li>";
 }
 $(".energi").html(text);
 }
@@ -74,12 +58,13 @@ bmiratio = (665.0955 + (9.5634 * vikt) + (1.8496 * langd) - (4.6756 * alder));
 bmitotal = (bmiratio * aktivitet);
 kcaltotal = (bmitotal - ((7000 * avdrag[i]) / 7));
 
-text += "<li>" + kcaltotal + "</li>";
+	text += "<li>" + Math.round(kcaltotal) + "kcal om dagen f&ouml;r att g&aring; ner " + (avdrag[i]) + " kilo i veckan" + "<span class='minus'>-" + Math.round(formel - kcaltotal) + "</span></li>";
 }
 
-$(".energi").html(text);
+$(".energi").html(text).fadeIn(2500);
 
 	}
+	  return false;
 }
 
 

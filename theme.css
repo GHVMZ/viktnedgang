@@ -87,10 +87,13 @@ z-index: 2;
 #kalkyl p{text-align: right; opacity: 0.5;}
 #grundinformation{background-color: #42B16D;}
 
-#resultat{background-color: #247142;}
+#resultat{background-color: #247142; display: block;}
 #resultat ul{list-style-type: none; margin: 0; padding: 0;}
-#resultat ul li{margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px solid rgba(255, 255, 255, 0.45); font-size: 1.2em;}
+#resultat ul li{color: rgba(255, 255, 255, 0.75); margin-top: 10px; padding-top: 10px; border-top: 1px solid rgba(255, 255, 255, 0.15); font-size: 1.2em; font-weight: 400;}
+#resultat ul li:first-child{border: 0;}
 .kcal{color: #fff;}
+.minus{float: right; color: pink;}
+.under{float: right;}
 
 
 footer{background-color: #000;}
@@ -110,7 +113,7 @@ margin-bottom: 25px;
 
 .info ul{list-style-type: none; margin: 0; padding: 0;}
 .info ul li{color: rgba(255, 255, 255, 0.75); margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px solid rgba(255, 255, 255, 0.15); line-height: 1.5;}
-.info ul li:last-child{margin: 0; padding: 0; border: 0;}
+.info ul li:last-child{margin: 0; padding: 0; border: 0; font-weight: 400; color: #fff; font-size: 1.3em;}
 .info ul li span{float: right; display: none;}
 .info ul li b{font-weight: 400; color: #fff;}
 .energi{color: #fff;}
