@@ -6,27 +6,28 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900,600' rel='stylesheet' type='text/css'>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-
 <script src="js/script.js"></script>
-
 <link rel="stylesheet" href="theme.css">
 </head>
 <body>
 
+
 <header id="header"><div>
-<img id="svg-logo" src="images/logo.svg" alt="Våg" />
-<h1>Viktnedgång</h1>
+<img class="fade-in two" id="svg-logo" src="images/logo.svg" alt="Våg" />
+<h1 class="fade-in one">Viktnedgång</h1>
 <a href="#grundinformation">Hur går man ner i vikt?</a>
 </div></header>
+
 
 <section id="grundinformation"><div class="container">
 <header><h2>Hur går man ner i vikt?</h2></header>
 <div class="flexbox">
 <div>
 <h3>Allt handlar om energi</h3>
-<p>När man vill gå ned i vikt handlar det om att ligga i negativ energibalans, dvs. förbruka mer energi än vad man får i sig. Det kan uppnås genom att ägna sig åt energikrävande processer som träning och genom att minska på energiintaget via kosten. </p>
+<p>När man vill gå ned i vikt handlar det om att ligga i negativ energibalans, dvs. förbruka mer energi än vad man får i sig. Det kan uppnås genom att ägna sig åt energikrävande processer som träning och genom att minska på energiintaget via kosten.</p>
+<p></p>
 <p>För att ha full kontroll över sitt kaloriintag så gäller det att man vet hur mycket kalorier kroppen gör av med under en dag.</p>
-<a class="knapp" href="#kaloribehov">Räkna ut ditt dagliga kaloribehov</a>
+<a class="knapp" href="#energibehov">Räkna ut ditt dagliga energibehov</a>
 </div>
 
 <div>
@@ -36,17 +37,23 @@
 
 </div></div></section>
 
-<section id="kaloribehov"><div class="container">
-<header><h2>Räkna ut ditt dagliga kaloribehov</h2></header>
+
+<section id="energibehov"><div class="container">
+<header><h2>Räkna ut ditt dagliga energibehov</h2></header>
 <div class="flexbox">
 
 <!-- Information -->
 <div class="info">
 <h3>Om kaloriräknaren</h3>
-<p>Med hjälp av kaloriräknaren kan du enkelt räkna ut ditt BMR () hur mycket energi din kropp behöver varje dag. Räknaren följer en gammal ekvation för att räkna ut det basala energi-intaget, Harris-benedict-ekvationen.</p>
-
+<p>Hur mycket energi en person förbrukar i vila varierar från person till person och man brukar kalla detta för BMR <a href="https://en.wikipedia.org/wiki/Basal_metabolic_rate" target="new">(Basal Metabolic Rate)</a> vilket innefattar den energi kroppen behöver för att fungera korrekt. Kaloriräknaren låter dig enkelt räkna ut din energiförbrukning (BMR) beroende på vad för typ av aktivitetsnivå du ligger på.</p>
 <h3>Aktivitetsnivå</h3>
-<p>Sed sollicitudin nulla quis justo ullamcorper, non lacinia erat semper. Donec non rutrum nisi. Vivamus consequat in lacus feugiat convallis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin justo lectus, porta sed neque quis, dapibus feugiat magna. Ut semper maximus euismod. Ut malesuada nibh vitae quam condimentum, eget commodo nunc pellentesque. Phasellus consequat diam quis semper bibendum.</p>
+<ul>
+<li><b>Minimal eller ingen aktivitet</b><br />Stillasittande. Skrivbordsarbete, ingen träning <span>1.2</span></li>
+<li><b>Låg aktivitet</b><br />Låg daglig aktivitet och lätt motion 1-3 dagar i veckan <span>1.375</span></li>
+<li><b>Normal aktivitet</b><br />Måttlig daglig aktivitet och måttlig motion 3-5 dagar i veckan <span>1.55</span></li>
+<li><b>Hög aktivitet</b><br />Fysiskt krävande livsstil och hård träning 6-7 dagar i veckan <span>1.725</span></li>
+<li><b>Väldigt hög aktivitet</b><br />Mycket hårt fysiskt arbete och uthållighetsträning på elitnivå <span>1.9</span></li>
+</ul>
 </div>
 <!-- End of info -->
 
@@ -60,9 +67,9 @@
 </select>
 
 <label for="vikt">Vikt</label>
-<input class="vikt" placeholder="kg" type="number" id="vikt" name="vikt" size="6" min="10" max="150" required>
+<input class="vikt" placeholder="kg" type="number" id="vikt" name="vikt" size="6" min="10" max="190" required>
 <label for="langd">Längd</label>
-<input class="langd" placeholder="cm" type="number" id="langd" name="langd" size="6" min="10" max="200" required>
+<input class="langd" placeholder="cm" type="number" id="langd" name="langd" size="6" min="10" max="220" required>
 <label for="alder">Ålder</label>
 <input class="alder" placeholder="år" type="number" id="alder" name="alder" size="6" min="10" max="100" required>
 
@@ -77,10 +84,16 @@
 </select>
 
 <input class="submit" type="submit" value="Beräkna kaloribehov"/>
-<div class="resultat"><div class="energibehov"></div></div>
+<p>Räknaren använder den förnyade <a href="https://en.wikipedia.org/wiki/Harris–Benedict_equation" target="new">Harris-benedict-ekvationen</a> av <a href="http://ajcn.nutrition.org/content/40/1/168" target="new">Roza and Shizgal</a>.</p>
 </form><!-- End of räknaren -->
 </div>
 </div></section>
+
+
+<section id="resultat"><div class="container">
+<header><h2 class="energibehov"></h2></header>
+<ul class="energi"></ul>
+</div></div></section>
 
 
 <footer><div class="footer-container">
