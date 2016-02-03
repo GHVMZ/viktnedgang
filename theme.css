@@ -96,7 +96,7 @@ z-index: 2;
 #kalkyl p{text-align: right; opacity: 0.5;}
 #grundinformation{background-color: #42B16D;}
 
-#resultat{background-color: #247142; display: none;}
+#resultat{background-color: #247142; display: none; color: #fff;}
 #resultat ul{list-style-type: none; margin: 0; padding: 0;}
 #resultat ul li{color: rgba(255, 255, 255, 0.75); margin-top: 10px; padding-top: 10px; border-top: 1px solid rgba(255, 255, 255, 0.15); font-size: 0.95em; font-weight: 400;}
 #resultat ul li:first-child{}
