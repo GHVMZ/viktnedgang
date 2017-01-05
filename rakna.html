@@ -1,0 +1,58 @@
+<section id="energibehov"><div class="container">
+<header><h2>Räkna ut ditt dagliga energibehov</h2></header>
+<div class="flexbox">
+
+<!-- Information -->
+<div class="info">
+<h3>Om kaloriräknaren</h3>
+<p>Hur mycket energi en person förbrukar i vila varierar från person till person och man brukar kalla detta för BMR <a href="https://en.wikipedia.org/wiki/Basal_metabolic_rate" target="new">(Basal Metabolic Rate)</a> vilket innefattar den energi kroppen behöver för att fungera korrekt. Kaloriräknaren låter dig enkelt räkna ut din energiförbrukning (BMR) beroende på vad för typ av aktivitetsnivå du ligger på.</p>
+<h3>Aktivitetsnivå</h3>
+<ul>
+<li><b>Minimal eller ingen aktivitet</b><br />Stillasittande. Skrivbordsarbete, ingen träning <span>1.2</span></li>
+<li><b>Låg aktivitet</b><br />Låg daglig aktivitet och lätt motion 1-3 dagar i veckan <span>1.375</span></li>
+<li><b>Normal aktivitet</b><br />Måttlig daglig aktivitet och måttlig motion 3-5 dagar i veckan <span>1.55</span></li>
+<li><b>Hög aktivitet</b><br />Fysiskt krävande livsstil och hård träning 6-7 dagar i veckan <span>1.725</span></li>
+<li><b>Väldigt hög aktivitet</b><br />Mycket hårt fysiskt arbete och uthållighetsträning på elitnivå <span>1.9</span></li>
+</ul>
+</div>
+<!-- End of info -->
+
+<!-- Räknaren -->
+<form id="kalkyl" onsubmit="return rakna()">
+<label for="kon">Kön</label>
+<select class="kon" id="kon" name="kon" required>
+<option value="">Välj</option>
+<option value="1">Man</option>
+<option value="2">Kvinna</option>
+</select>
+
+<label for="vikt">Vikt</label>
+<input class="vikt" placeholder="kg" type="number" id="vikt" name="vikt" size="6" min="10" max="190" required>
+<label for="langd">Längd</label>
+<input class="langd" placeholder="cm" type="number" id="langd" name="langd" size="6" min="10" max="220" required>
+<label for="alder">Ålder</label>
+<input class="alder" placeholder="år" type="number" id="alder" name="alder" size="6" min="10" max="100" required>
+
+<label for="aktivitet">Aktivitetsnivå</label>
+<select id="aktivitet" name="aktivitet" required>
+<option value="">Välj</option>
+<option value="1.2">Minimal eller ingen aktivitet</option>
+<option value="1.375">Låg aktivitet</option>
+<option value="1.55">Normal aktivitet</option>
+<option value="1.725">Hög aktivitet</option>
+<option value="1.9">Väldigt hög aktivitet</option>
+</select>
+
+<input class="submit" type="submit" value="Beräkna kaloribehov"/>
+<p>Räknaren använder den förnyade <a href="https://en.wikipedia.org/wiki/Harris–Benedict_equation" target="new">Harris-benedict-ekvationen</a> av <a href="http://ajcn.nutrition.org/content/40/1/168" target="new">Roza and Shizgal</a>.</p>
+</form><!-- End of räknaren -->
+</div>
+</div></section>
+
+
+<section id="resultat"><div class="container">
+<header><h2 class="energibehov"></h2></header>
+<h3>Kaloriintag för viktnedgång</h3>
+Kaloribehov<span class="under">Underskott</span>
+<ul class="energi"></ul>
+</div></section>
